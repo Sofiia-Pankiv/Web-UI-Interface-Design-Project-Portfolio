@@ -1,26 +1,94 @@
 <script>
-    import {onMount} from 'svelte';
+	import { onMount } from 'svelte';
     import { Card } from '$lib';
+	import { fade } from 'svelte/transition';
+
+	let showSplash = true;
 
     onMount(() => {
         console.log("Home Page Loaded");
     });
+
+	onMount(() => {
+		setTimeout(() => {
+			showSplash = false;
+		}, 5000);
+	});
 </script>
 
-<h1>Home page</h1>
-<p>I have to start coding this</p>
-
-<!-- Gallery Container-->
- <div class="gallery">
-    <Card title="Card 1" description="This is the first card."/>
-    <Card title="Card 2" description="This is the second card."/>
-    <Card title="Card 3" description="This is the third card."/>
-    <Card title="Card 4" description="This is the fourth card."/>
-    <Card title="Card 5" description="This is the sixth card."/>
- </div>
-
+{#if showSplash}
+	<div class="splash-screen" transition:fade>
+		<div class="splash-content">
+			<img src="splash.png" alt="Portrait of Sofiia Pankiv" class="splash-img" />
+			<div class="splash-box">
+				<p class="portfolio-label">Portfolio</p>
+				<h1 class="splash-title">Sofiia Pankiv</h1>
+			</div>
+		</div>
+	</div>
+{:else}
+	<!-- Gallery Container-->
+    <div class="gallery">
+        <Card title="Card 1" description="This is the first card."/>
+        <Card title="Card 2" description="This is the second card."/>
+        <Card title="Card 3" description="This is the third card."/>
+        <Card title="Card 4" description="This is the fourth card."/>
+        <Card title="Card 5" description="This is the sixth card."/>
+     </div>
+{/if}
 
 <style>
+	.splash-screen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999;
+	}
+
+	.splash-content {
+		text-align: center;
+		position: relative;
+	}
+
+	.splash-img {
+		width: auto;
+		max-height: 80vh;
+		object-fit: contain;
+	}
+
+	.splash-box {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #5c1d1d;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	}
+
+	.portfolio-label {
+		font-size: 1rem;
+		color: #f5d5b2;
+		margin: 0;
+		font-family: 'Georgia', serif;
+	}
+
+	.splash-title {
+		margin: 0;
+		font-size: 2rem;
+		color: #fce9c6;
+		font-weight: bold;
+		font-family: 'Brush Script MT', cursive;
+	}
+
+
     /* Flexbox for Dynamic Layout */
     .gallery {
         display: flex;
