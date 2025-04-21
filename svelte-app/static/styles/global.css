@@ -4,7 +4,7 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #007bff;
+    --primary-color: #290407;
     --background-color: #f8f9fa;
     --text-color: #333;
     --link-hover-color: #0056b3;
@@ -39,6 +39,14 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: var(--line-height-base);
+
+     /* Background Image */
+     background-image: url('/Background.png'); /* adjust path if needed */
+     background-size: cover; /* fill the screen */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; /* keeps it in place on scroll */
+     
 }
 
 /* ==============================

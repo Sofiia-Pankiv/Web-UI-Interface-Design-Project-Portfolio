@@ -7,7 +7,7 @@
 <header>
     <!-- Logo -->
     <div class="logo">
-        <img src="/logo.png" alt="Website Logo">
+        <img src="/Logo.png" alt="Website Logo">
         <h1>My Svelte App</h1>
     </div>
 
