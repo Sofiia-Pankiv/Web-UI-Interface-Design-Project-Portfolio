@@ -11,7 +11,7 @@
 	onMount(() => {
 		setTimeout(() => {
 			showSplash = false;
-		}, 5000);
+		}, 3000);
 	});
 </script>
 
@@ -77,7 +77,7 @@
 		object-fit: contain;
 	}
 
-	.splash-box {
+.splash-box {
 	position: absolute;
 	bottom: 10%;
 	left: 50%;
@@ -144,20 +144,20 @@
 }
 
 .barcodeImg {
-	width: 300px;
+	width: 250px;
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
 }
 
 .ferret {
-	width: 600px;
-	margin: 0 auto;
+	width: 650px;
+	margin:  auto;
     position: center;
 }
 
 .about-text {
-	max-width: 600px;
+	max-width: 950px;
 	margin-left: auto;
 	margin-right: 0;
 	color: #fce9c6;
@@ -170,7 +170,7 @@
 .ticker-wrapper {
 	width: 100%;
 	overflow: hidden;
-	background-color: var(--primary-color); /* optional */
+	background-color: #ae1817; /* optional */
 	color: #ffd99c;
 	padding: 0.5rem 0;
     position: relative;

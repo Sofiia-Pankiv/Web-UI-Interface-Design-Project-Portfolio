@@ -1,28 +1,35 @@
 <script>
     let isOpen = false;
+    import {Clock} from "$lib";
 </script>
 
+<Clock />
 
 <nav class="nav">
+
     <!--Burger Menu Button (Visible on Small Screens)-->
     <button class ="burger"on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
         --
     </button>
         
     <ul class:open={isOpen}>
-        <li><a href="/">Info</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/contact">Contact</a></li> 
+        <li><a href="/">• Info</a></li>
+        <li><a href="/portfolio">• Portfolio</a></li>
+        <li><a href="/contact">• Contact</a></li> 
     </ul>
 </nav>
 
 
 <style>
+
     /* Base Navigation Styling */
     .nav {
-        background-color: #007bff;
-        padding: 1rem;
-        text-align: center;
+        background-color: none;
+        padding: 2px;
+        text-align:left;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
     }
 
     .nav ul {
@@ -30,8 +37,9 @@
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: left; /* Optional: center horizontally */
+        gap: 10px;
     }
 
     .nav ul li {

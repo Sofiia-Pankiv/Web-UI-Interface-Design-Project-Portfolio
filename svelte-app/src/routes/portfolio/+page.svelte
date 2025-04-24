@@ -1,11 +1,22 @@
 <script>
-    import {onMount} from 'svelte';
+    import { catalogue } from '$lib/catalogue';
+    import { onMount } from 'svelte';
     import { Card } from '$lib';
-    import { on } from 'svelte/events';
+    import { goto } from '$app/navigation';
 
+   
     onMount(() =>{
-        console.log("About Page Loaded");
+        console.log("Portfolio Page Loaded");
     });
+
+    
+    /** Function to navigate to the item's detail page
+	//  * @param {string} id
+	 */
+    //  function viewItem(id) {
+    //     goto(`portfolio/${id}`);
+    // }
+
 </script>
 
 <!-- Project Ticker -->
@@ -18,20 +29,21 @@
 	</div>
 </div>
 
-<!-- Gallery Container-->
+
 <div class="gallery">
-    <Card title="Card 1" description="This is the first card."/>
-    <Card title="Card 2" description="This is the second card."/>
-    <Card title="Card 3" description="This is the third card."/>
-    <Card title="Card 4" description="This is the fourth card."/>
-    <Card title="Card 5" description="This is the sixth card."/>
- </div>
+    {#each catalogue as card}
+            <!-- <button class="Card" on:click={() => viewItem(card.id)}> -->
+                <Card image={card.image} title={card.title}  href={card.href} />
+            <!-- </button> -->
+    {/each}
+</div>
+
 
 <style>
    .ticker-Project-wrapper {
 	width: 100%;
 	overflow: hidden;
-	background-color: var(--primary-color);
+	background-color: #ae1817;
 	color: #ffd99c;
 	padding: 0.5rem 0;
 	position: relative;
@@ -52,14 +64,7 @@
 	gap: 2rem;
 }
 
-@keyframes scrollTicker {
-	0% {
-		transform: translateX(0%);
-	}
-	100% {
-		transform: translateX(-50%);
-	}
-}
+
 
 .gallery{
     display: grid;
@@ -68,42 +73,6 @@
     margin-top: 2rem;
 }
 
-.gallery > .card{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items:center;
-}
-
-    /* Pseudo-Element: Add Decorative Lines Before Gallery */
-    .gallery::before {
-        content: "Featured Cards";
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    /* Pseudo-Element: Add Decorative Line After Gallery */
-    .gallery::after {
-        content: "";
-        width: 60%;
-        height: 3px;
-        background: linear-gradient(to right, #007bff, transparent);
-        margin: 2rem auto 0 auto;
-    }
-
-    /* Highlight the first and last child in the gallery */
-    :global(.gallery > .card:first-child) {
-        border: 3px solid gold; /* Emphasize the first card */
-    }
-
-    :global(.gallery > .card:last-child) {
-        border: 3px solid crimson; /* Emphasize the last card */
-    }
-
-    /* Apply a different background color to even-numbered cards */
-    :global(.gallery > .card:nth-child(even)) {
-        background-color: #ebebeb;
-    }
 
     /* Apply a hover effect: spotlight effect on the hovered card */
     :global(.gallery > .card:hover) {
@@ -123,13 +92,14 @@
         opacity: 0.9; /* Slightly fade them */
     }
 
-    /* Apply a special styling to every third card */
-    :global(.gallery > .card:nth-child(3n)) {
-        border-left: 5px solid #98caff; /* Left accent border */
-    }
-
-    /* Exclude the first and last card from being affected by nth-child styling */
-    :global(.gallery > .card:not(:first-child):not(:last-child)) {
-        border-radius: 18px; /* Softens edges for middle cards */
-    }
+   
+    
+    @keyframes scrollTicker {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
 </style>

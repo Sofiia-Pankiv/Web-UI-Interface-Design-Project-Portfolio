@@ -1,6 +1,7 @@
 <script>
     // import Navigation.svelte from lib folder
     import { Navigation } from "$lib"
+   
 </script>
 
 
@@ -8,7 +9,7 @@
     <!-- Logo -->
     <div class="logo">
         <img src="/Logo.png" alt="Website Logo">
-        <h1>My Svelte App</h1>
+        <!-- <h1>My Svelte App</h1> -->
     </div>
 
     <!-- Navigation -->
@@ -34,7 +35,7 @@
     }
 
     .logo img {
-        width: 50px;
+        width: 100px;
         margin-right: 0.625rem;
     }
 

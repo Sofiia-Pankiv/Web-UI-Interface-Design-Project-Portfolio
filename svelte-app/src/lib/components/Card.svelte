@@ -1,79 +1,78 @@
 <script>
-    //Props allow customization of card title and description
-    export let title ="Card Title";
-    export let description = "This is a brief description of the card.";
+    import { goto } from '$app/navigation';
 
+    export let title = "Card Title";
+    export let image;
+    export let href = "#";
+
+    function handleClick() {
+        goto(href);
+    }
 </script>
 
-<div class ="card">
-    <img src="/ME.png" alt="Placeholder">
-
-    <div class="content">
-        <h2>{title}</h2>
-        <p>{description}</p>
+<!-- Entire card is clickable -->
+<div class="card" on:click={handleClick}>
+    <div class="image-wrapper">
+        <img src={image} alt={title} class="card-image" />
+        <div class="overlay">
+            <h2>{title}</h2>
+        </div>
     </div>
 </div>
 
-
 <style>
-    /* Card container with smooth hover effects */
     .card {
-        background: white;
-        border-radius: 10px; /* Rounded corners */
-        border: 2px solid #007bff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        width: 250px;
+        height: 250px;
         overflow: hidden;
-        width: 280px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        border-radius: 12px;
+        position: relative;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
     }
 
-    /* Advanced Selector: Direct Child Combinator (>)
-       This ensures that only direct `img` elements inside `.card` get these styles */
-    .card > img {
-        width: 100%; /* Responsive width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 8px 8px 0 0; /* Round only the top corners */
-    }
-
-    /* Content Styling: Padding for better spacing */
-    .content {
-        padding: 1.5rem;
-    }
-
-    /* Title Styling */
-    .content h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Description Styling */
-    .content p {
-        font-size: 1rem;
-        color: #555;
-    }
-
-    /* Pseudo-Class: Hover Effect
-       Adds a subtle lift when hovering over the card */
     .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     }
 
-    /* Pseudo-Element: Adds a thin underline before the card title
-       Creates a subtle decorative effect to enhance UI */
-    .content h2::before {
-        content: "";
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
-        width: 40%;
-        height: 2px;
-        background: #007bff;
-        margin: 0 auto 10px auto;
-        transition: width 0.3s ease-in-out;
+        border-radius: 12px;
     }
 
-    /* When .card is hovered, expand the decorative effect to 80% */
-    .card:hover .content h2::before {
-        width: 80%; /* Expanded width on hover */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay h2 {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 0 1rem;
     }
 </style>
