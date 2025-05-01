@@ -8,7 +8,8 @@ onMount(() => {
 </script>
 
 <div class="image-section">
-    <img src="/photo1.png" alt="Fine Art" class="image" />
+    <!-- svelte-ignore a11y_img_redundant_alt -->
+    <img src="/photo1.png" alt="Photo" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Photoes</h1>
@@ -32,7 +33,6 @@ onMount(() => {
 <img src="photo4.jpg" alt="Logo" class="image-bar" />
 <img src="photo5.jpg" alt="Logo" class="image-bar" />
 <img src="photo6.jpg" alt="Logo" class="image-bar" />
-<img src="photo7.tif" alt="Logo" class="image-bar" />
 <img src="photo8.jpg" alt="Logo" class="image-bar" />
 <img src="photo9.jpg" alt="Logo" class="image-bar" />
 <img src="photo10.jpg" alt="Logo" class="image-bar" />
@@ -40,7 +40,6 @@ onMount(() => {
 <img src="photo12.JPG" alt="Logo" class="image-bar" />
 <img src="photo13.JPG" alt="Logo" class="image-bar" />
 <img src="photo14.JPG" alt="Logo" class="image-bar" />
-<img src="photo15.png" alt="Logo" class="image-bar" />
 <img src="photo16.JPG" alt="Logo" class="image-bar" />
 
 

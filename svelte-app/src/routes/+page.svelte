@@ -1,57 +1,57 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-
+  
 	let showSplash = true;
-
-    onMount(() => {
-        console.log("Home Page Loaded");
-    });
-
+  
 	onMount(() => {
-		setTimeout(() => {
-			showSplash = false;
-		}, 3000);
+	  console.log("Home Page Loaded");
 	});
-</script>
-
-{#if showSplash}
+  
+	onMount(() => {
+	  setTimeout(() => {
+		showSplash = false;
+	  }, 3000);
+	});
+  </script>
+  
+  {#if showSplash}
 	<div class="splash-screen" transition:fade>
-		<div class="splash-content">
-			<img src="splash.png" alt="Portrait of Sofiia Pankiv" class="splash-img" />
-			<div class="splash-box">
-				<p class="portfolio-label">Portfolio</p>
-				<h1 class="splash-title">Sofiia Pankiv</h1>
-			</div>
+	  <div class="splash-content">
+		<img src="splash.png" alt="Portrait of Sofiia Pankiv" class="splash-img" />
+		<div class="splash-box">
+		  <p class="portfolio-label">Portfolio</p>
+		  <h1 class="splash-title">Sofiia Pankiv</h1>
 		</div>
+	  </div>
 	</div>
-{:else}
+  {:else}
+	<div class="header-bar">
+	  <h2 class="header-title">Sofiia Pankiv</h2>
+	</div>
+  
+	<div class="ticker-wrapper">
+	  <div class="ticker">
+		<span>About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • </span>
+		<span>About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • </span>
+	  </div>
+	</div>
+  
+	<div class="main-content">
+	  <img src="barcode1.png" alt="Barcode" class="barcodeImg" />
+	  <img src="Ferret.png" alt="Ferret" class="ferret" />
+	  <p class="about-text">
+		Hey there!<br><br>
+		I'm Sofiia - student of South East Technology University studying Computing in Interactive Digital Art and Design.
+		I’m a future graphic designer with a passion for art, crafting, and learning something new.<br><br>
+		I love turning ideas into reality through creativity and problem-solving. Whether it's designing creative websites or animations,
+		logos or brochures, illustrations or mini games—I’m always eager to push boundaries and create impactful work.<br><br>
+		Let’s connect and bring great ideas to life!
+	  </p>
+	</div>
+  {/if}
 
-    <div class="header-bar">
-	    <h2 class="header-title">Sofiia Pankiv</h2>
-    </div>
-
-    <div class="ticker-wrapper">
-	    <div class="ticker">
-		    <span>About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • </span>
-            <span>About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • About • </span>
-	    </div>
-    </div>
-
-    <div class="main-content">
-        <img src="barcode1.png" alt="Barcode" class="barcodeImg" />
-        <img src="Ferret.png" alt="Ferret" class="ferret" />
-        <p class="about-text">
-            Hey there!<br><br>
-            I'm Sofiia - student of South East Technology University studying Computing in Interactive Digital Art and Design.
-            I’m a future graphic designer with a passion for art, crafting, and learning something new.<br><br>
-            I love turning ideas into reality through creativity and problem-solving. Whether it's designing creative websites or animations,
-            logos or brochures, illustrations or mini games—I’m always eager to push boundaries and create impactful work.<br><br>
-            Let’s connect and bring great ideas to life!
-        </p>
-    </div>
-{/if}
-
+  
 <style>
 	.splash-screen {
 		position: fixed;
