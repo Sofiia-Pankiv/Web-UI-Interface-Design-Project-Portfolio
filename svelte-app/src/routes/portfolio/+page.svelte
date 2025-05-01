@@ -10,12 +10,7 @@
     });
 
     
-    /** Function to navigate to the item's detail page
-	//  * @param {string} id
-	 */
-    //  function viewItem(id) {
-    //     goto(`portfolio/${id}`);
-    // }
+    
 
 </script>
 
@@ -32,9 +27,9 @@
 
 <div class="gallery">
     {#each catalogue as card}
-            <!-- <button class="Card" on:click={() => viewItem(card.id)}> -->
-                <Card image={card.image} title={card.title}  href={card.href} />
-            <!-- </button> -->
+           
+        <Card image={card.image} title={card.title}  href={card.href} />
+          
     {/each}
 </div>
 
@@ -60,7 +55,6 @@
 	animation: scrollTicker 20s linear infinite;
 	font-size: 1.5rem;
 	font-weight: bold;
-	font-family: 'Georgia', serif;
 	gap: 2rem;
 }
 
@@ -68,7 +62,7 @@
 
 .gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(5, 1fr);/*repeat(auto-fit, minmax(250px,1fr)); */
     gap: 40px;
     margin-top: 2rem;
 }
@@ -94,7 +88,7 @@
 
    
     
-    @keyframes scrollTicker {
+@keyframes scrollTicker {
 	0% {
 		transform: translateX(0%);
 	}
@@ -102,4 +96,35 @@
 		transform: translateX(-50%);
 	}
 }
+
+@media (max-width: 768px) {
+    .ticker-content {
+      font-size: 1rem; /* Smaller text for the ticker */
+      gap: 1rem; /* Reduce gap in ticker */
+      animation-duration: 15s; /* Slightly faster animation on smaller screens */
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Even smaller cards */
+      gap: 10px; /* Further reduce gap */
+      margin-top: 1rem; /* Further reduce top margin */
+      
+    }
+
+    /* Remove hover effects on touch devices for better usability */
+    :global(.gallery > .card:hover) {
+      transform: none;
+      z-index: auto;
+    }
+
+    :global(.gallery > .card:hover ~ .card) {
+      transform: none;
+      opacity: 1;
+    }
+
+    :global(.gallery > .card:hover + .card) {
+      transform: none;
+      opacity: 1;
+    }
+  }
 </style>

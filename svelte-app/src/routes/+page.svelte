@@ -94,23 +94,22 @@
 
 	border-radius: 12px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-	border: 3px solid #000000; /* 👈 outline added */
+	border: 3px solid #000000; 
 }
 
 .portfolio-label {
-	font-size: 1.3rem; /* 👈 larger */
+	font-size: 2.5rem; 
 	color: #f5d5b2;
 	margin: 0;
-	font-family: 'Georgia', serif;
+	
 }
 
 .splash-title {
 	margin: 0;
 	margin-top: 0.5rem;
-	font-size: 2.5rem; /* 👈 larger */
+	font-size: 3.5rem;
 	color: #fce9c6;
 	font-weight: bold;
-	font-family: 'Brush Script MT', cursive;
 	text-align: center;
 }
 
@@ -128,8 +127,7 @@
 
 .header-title {
 	margin: 0;
-	font-size: 2rem;
-	font-family: 'Brush Script MT', cursive;
+	font-size: 3rem;
 	font-weight: bold;
 	text-align: center;
 }
@@ -152,7 +150,7 @@
 
 .ferret {
 	width: 650px;
-	margin:  auto;
+	
     position: center;
 }
 
@@ -163,8 +161,8 @@
 	color: #fce9c6;
     font-size: 2rem;
 	font-weight: bold;
-	font-family: 'Brush Script MT', cursive;
 	text-align: left;
+	font-family: 'ReenieBeanie-Regular';
 }
 
 .ticker-wrapper {
@@ -180,9 +178,8 @@
     display: flex;
 	width: max-content;
 	animation: scrollTicker 20s linear infinite;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: bold;
-	font-family: 'Georgia', serif;
 	gap: 2rem;
 }
 
@@ -194,6 +191,36 @@
 		transform: translateX(-50%);
 	}
 }
+@media (max-width: 768px) {
+    .header-title {
+      font-size: 2.5rem;
+    }
 
-   
+    .barcodeImg {
+      width: 150px;
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+
+    .ferret {
+      max-width: 400px;
+      margin-right: 1rem; /* Adjust right margin for phone layout */
+      margin-left: auto; /* Push ferret to the right */
+      display: block; /* Ensure margin-left works as expected */
+    }
+
+    .about-text {
+      font-size: 1.5rem;
+      text-align: left; /* Keep text left-aligned on phones */
+      margin-left: 1rem; /* Add some left margin for text */
+      margin-right: 1rem; /* Add some right margin for text */
+    }
+
+    .main-content {
+      flex-direction: column; /* Stack elements on phones */
+      align-items: flex-start; /* Align items to the left on phones */
+      padding: 1rem; /* Adjust padding for phones */
+    }
+  }
+
 </style>
