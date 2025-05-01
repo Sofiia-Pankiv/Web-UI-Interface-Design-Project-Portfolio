@@ -11,6 +11,8 @@
 </script>
 
 <!-- Entire card is clickable -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="card" on:click={handleClick}>
     <div class="image-wrapper">
         <img src={image} alt={title} class="card-image" />
@@ -69,10 +71,21 @@
     }
 
     .overlay h2 {
-        color: white;
+        color: #ffdaac;
         font-size: 1.4rem;
         font-weight: bold;
         text-align: center;
         padding: 0 1rem;
     }
+
+    @media (max-width: 768px) {
+    .card {
+      width: 175px; /* Set the width to 150px on smaller screens */
+      height: 175px; /* Maintain a square aspect ratio */
+    }
+
+    .overlay h2 {
+      font-size: 1rem; /* Adjust overlay text size for smaller cards */
+    }
+  }
 </style>

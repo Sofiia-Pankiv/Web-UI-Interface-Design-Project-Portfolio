@@ -1,17 +1,18 @@
 <footer>
-    <p>&copy; 2025 My Svelte App. All rights reserved.</p>
+    <p>&copy; 2025 Portfolio. All rights reserved.</p>
 </footer>
 
 
 <style>
     footer {
-        background-color: #343a40;
-        color: white;
+        background-color: #290407;
+        color: #ffdaac;
         text-align: center;
         padding: 1rem;
         position: fixed;
         bottom: 0;
         width: 100%;
+        height: 50px;
     }
 
     /* Mobile: Reduce padding for a more compact look */

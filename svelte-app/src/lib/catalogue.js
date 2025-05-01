@@ -7,9 +7,8 @@ export const catalogue = [
     { id: '6', image:`Level.gif`, title: 'Game Assets', href:"/gif" },
     { id: '7', image:`Logo.jpg`, title: 'Logo Design', href:"/logo" },
     { id: '8', image:`painting.JPG`, title: 'Paintings', href:"/painting" },
-    { id: '9', image:`sketch1.jpg`, title: 'Sketches', href:"/sketch" },
-    { id: '10', image:`smilePhoto.jpg`, title: 'Photoes', href:"/photo" },
-    { id: '11', image:`Utopia.png`, title: 'Website Game', href:"/game" }
+    { id: '9', image:`smilePhoto.jpg`, title: 'Photoes', href:"/photo" },
+    { id: '10', image:`Utopia.png`, title: 'Website Game', href:"/game" }
     
   ];
   

@@ -8,7 +8,9 @@
 <header>
     <!-- Logo -->
     <div class="logo">
-        <img src="/Logo.png" alt="Website Logo">
+        <a href="/">
+            <img src="/Logo.png" alt="Website Logo">
+        </a>
         <!-- <h1>My Svelte App</h1> -->
     </div>
 
@@ -42,12 +44,23 @@
     /* Mobile: Center logo and stack items */
     @media (max-width: 768px) {
         header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .logo {
-            justify-content: center;
-        }
+      flex-direction: row; /* Keep logo and navigation in a row */
+      justify-content: space-between; /* Put space between logo and navigation */
+      align-items: center; /* Vertically align items */
+      padding: 1rem; /* Keep some padding */
     }
+
+    .logo {
+      justify-content: flex-start; /* Align logo to the left */
+      margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .logo img {
+      width: 100px; /* Keep logo size consistent on phones */
+      margin-right: 1rem; /* Add some right margin for spacing */
+    }
+
+   
+
+  }
 </style>

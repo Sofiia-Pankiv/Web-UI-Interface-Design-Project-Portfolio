@@ -28,10 +28,20 @@
 	}
 
 	.clockDisplay {
-		font-size: 1.2em;
+		font-size: 2em;
 		border-radius: 15px;
-		color: #ffd99c;
+		color: #b44544;
 	}
+
+	@media (max-width: 768px) {
+		.clockDisplay {
+		font-size: 1.5rem;
+		border-radius: 5px;
+		
+	}
+	}
+
+
 </style>
 
 <section>

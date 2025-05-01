@@ -7,11 +7,6 @@
 
 <nav class="nav">
 
-    <!--Burger Menu Button (Visible on Small Screens)-->
-    <button class ="burger"on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
-        --
-    </button>
-        
     <ul class:open={isOpen}>
         <li><a href="/">• Info</a></li>
         <li><a href="/portfolio">• Portfolio</a></li>
@@ -47,50 +42,33 @@
     }
 
     .nav ul li a {
-        color: white;
+        color:#c8ac97;
         text-decoration: none;
         font-weight: bold;
+        font-size: 1.3em;
     }
 
-    /* 🍔 Burger Menu (Hidden on Large Screens) */
-    .burger {
-        display: none;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-    }
-
+    
     /* Mobile Navigation: Show Burger Menu */
     @media (max-width: 768px) {
-        .burger {
-            display: block; /* Show burger icon */
-            left: 90%;
-        }
 
-        .nav ul {
-            display: none; /* Hide menu by default */
-            flex-direction: column;
-            position: absolute;
-            top: 90px;
-            left: 0;
-            width: 100%;
-            background: #007bff;
-            text-align: left;
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+         /* You'll likely need to adjust Navigation styling here to move it to the right */
+    /* For example, if Navigation is a <nav> element: */
+    :global(nav) {
+        width: 100%; /* Take full width */
+     display: flex;
+     justify-content: flex-end; /* Push navigation to the right */
+     }
 
-        .nav ul.open {
-            display: flex; /* Show menu when isOpen is true */
-        }
+     :global(nav ul) {
+     flex-direction: row; /* Keep links in a row */
+     align-items: center;
+     }
 
-        .nav ul li {
-            padding: 10px 20px;
-        }
+     :global(nav ul li) {
+     margin-left: 1rem;
+     flex-direction: row; 
+     }
+        
     }
 </style>
