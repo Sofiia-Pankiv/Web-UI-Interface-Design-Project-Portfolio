@@ -28,6 +28,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'ReenieBeanie-Regular';
+    
 }
 
 /* ==============================
@@ -55,6 +57,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin-bottom: var(--spacing-small);
+    font-family: 'Sue Ellen Francisco';
 }
 
 /* ==============================
@@ -85,4 +88,19 @@ a:hover {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--spacing-medium);
+}
+
+
+@font-face {
+    font-family: 'Sue Ellen Francisco';
+    src: url('/Sue Ellen Francisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ReenieBeanie-Regular';
+    src: url('/ReenieBeanie-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
