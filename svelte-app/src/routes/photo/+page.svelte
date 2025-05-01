@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Photo Page Loaded");
@@ -9,7 +10,7 @@ onMount(() => {
 
 <div class="image-section">
     <!-- svelte-ignore a11y_img_redundant_alt -->
-    <img src="/photo1.png" alt="Photo" class="image" />
+    <img src="{ base }/photo1.png" alt="Photo" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Photoes</h1>
@@ -26,21 +27,21 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="smilePhoto.jpg" alt="Logo" class="image-bar" />
-<img src="photo1.jpg" alt="Logo" class="image-bar" />
-<img src="photo2.jpg" alt="Logo" class="image-bar" />
-<img src="photo3.jpg" alt="Logo" class="image-bar" />
-<img src="photo4.jpg" alt="Logo" class="image-bar" />
-<img src="photo5.jpg" alt="Logo" class="image-bar" />
-<img src="photo6.jpg" alt="Logo" class="image-bar" />
-<img src="photo8.jpg" alt="Logo" class="image-bar" />
-<img src="photo9.jpg" alt="Logo" class="image-bar" />
-<img src="photo10.jpg" alt="Logo" class="image-bar" />
-<img src="photo11.jpg" alt="Logo" class="image-bar" />
-<img src="photo12.JPG" alt="Logo" class="image-bar" />
-<img src="photo13.JPG" alt="Logo" class="image-bar" />
-<img src="photo14.JPG" alt="Logo" class="image-bar" />
-<img src="photo16.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/smilePhoto.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo1.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo2.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo3.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo4.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo5.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo6.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo8.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo9.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo10.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo11.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/photo12.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/photo13.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/photo14.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/photo16.JPG" alt="Logo" class="image-bar" />
 
 
 </div>

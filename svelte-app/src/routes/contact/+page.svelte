@@ -2,6 +2,8 @@
 
     import { onMount } from 'svelte';
     import {Clock} from "$lib";
+    import { base } from '$app/paths';
+    import { goto } from '$app/navigation';
 
     onMount(() => {
 
@@ -19,34 +21,28 @@
     <div class="info">
 
         <div class="line">
-            <img src="email.png" alt="Email icon" />
-            <a href="mailto:sophiapankiv10@gmail.com">sophiapankiv10@gmail.com</a>
+            <img src="{ base }/email.png" alt="Email icon" />
+            <a href="{ base }/mailto:sophiapankiv10@gmail.com">sophiapankiv10@gmail.com</a>
         </div>
     
-    
-    
         <div class="line">
-            <img src="instagram icon.png" alt="Instagram icon" />
-            <a href="https://www.instagram.com/sophia18ad/">@sophia18ad</a>
+            <img src="{ base }/instagram icon.png" alt="Instagram icon" />
+            <a href="{ base }/https://www.instagram.com/sophia18ad/" target="_blank" rel="noopener noreferrer">@sophia18ad</a>
         </div>
     
-    
-    
         <div class="line">
-            <img src="facebook.png" alt="Facebook icon" />
-            <a href="https://www.facebook.com/share/16HQiW6bcr/?mibextid=wwXIfr">Sophia Pankiv</a>
-        </div>
-
-
-
-        <div class="line">
-            <img src="watsup.png" alt="Whatsapp icon" />
-            <a href="https://api.whatsapp.com/send?phone=+3530852854744">+353 85 285 4744</a>
+            <img src="{ base }/facebook.png" alt="Facebook icon" />
+            <a href="{ base }/https://www.facebook.com/share/16HQiW6bcr/?mibextid=wwXIfr">Sophia Pankiv</a>
         </div>
 
         <div class="line">
-            <img src="Linkidin.png" alt="LinkedIn icon" />
-            <a href="https://www.linkedin.com/in/sofiia-pankiv-181614350">Sofiia Pankiv</a>
+            <img src="{ base }/watsup.png" alt="Whatsapp icon" />
+            <a href="{ base }/https://api.whatsapp.com/send?phone=+3530852854744">+353 85 285 4744</a>
+        </div>
+
+        <div class="line">
+            <img src="{ base }/Linkidin.png" alt="LinkedIn icon" />
+            <a href="{ base }/https://www.linkedin.com/in/sofiia-pankiv-181614350">Sofiia Pankiv</a>
         </div>
     
     </div>
@@ -55,7 +51,7 @@
     
     
     
-<img src="ContactFerret.png" alt="Ferret" class="ferret" />
+<img src="{ base }/ContactFerret.png" alt="Ferret" class="ferret" />
     
     
     

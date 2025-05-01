@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { base } from '$app/paths';
   
 	let showSplash = true;
   
@@ -18,7 +19,7 @@
   {#if showSplash}
 	<div class="splash-screen" transition:fade>
 	  <div class="splash-content">
-		<img src="splash.png" alt="Portrait of Sofiia Pankiv" class="splash-img" />
+		<img src="{ base }/splash.png" alt="Portrait of Sofiia Pankiv" class="splash-img" />
 		<div class="splash-box">
 		  <p class="portfolio-label">Portfolio</p>
 		  <h1 class="splash-title">Sofiia Pankiv</h1>
@@ -38,8 +39,8 @@
 	</div>
   
 	<div class="main-content">
-	  <img src="barcode1.png" alt="Barcode" class="barcodeImg" />
-	  <img src="Ferret.png" alt="Ferret" class="ferret" />
+	  <img src="{ base }/barcode1.png" alt="Barcode" class="barcodeImg" />
+	  <img src="{ base }/Ferret.png" alt="Ferret" class="ferret" />
 	  <p class="about-text">
 		Hey there!<br><br>
 		I'm Sofiia - student of South East Technology University studying Computing in Interactive Digital Art and Design.

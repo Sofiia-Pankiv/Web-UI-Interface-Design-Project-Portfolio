@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Poster Page Loaded");
@@ -8,7 +9,7 @@ onMount(() => {
 </script>
 
 <div class="image-section">
-    <img src="poster.png" alt="Fine Art" class="image" />
+    <img src="{ base }/poster.png" alt="Fine Art" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Posters</h1>
@@ -25,11 +26,11 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="15h.jpg" alt="Poster" class="image-bar" />
-<img src="15i.jpg" alt="Poster" class="image-bar" />
-<img src="poster2.png" alt="Poster" class="image-bar" />
-<img src="pers.png" alt="Poster" class="image-bar" />
-<img src="PortretValerii.png" alt="Poster" class="image-bar" />
+<img src="{ base }/15h.jpg" alt="Poster" class="image-bar" />
+<img src="{ base }/15i.jpg" alt="Poster" class="image-bar" />
+<img src="{ base }/poster2.png" alt="Poster" class="image-bar" />
+<img src="{ base }/pers.png" alt="Poster" class="image-bar" />
+<img src="{ base }/PortretValerii.png" alt="Poster" class="image-bar" />
 
 
 

@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Assets for Game Page Loaded");
@@ -9,7 +10,7 @@ onMount(() => {
 
 
 <div class="image-section">
-    <img src="/Game.png" alt="Game Assets" class="image" />
+    <img src="{ base }/Game.png" alt="Game Assets" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Game Assets</h1>
@@ -26,22 +27,22 @@ onMount(() => {
 
 <div class="scrolling-bar">
     
-<img src="Level.gif" alt="game" class="image-bar" />
-<img src="AnimatedEnemie1.gif" alt="game" class="image-bar" />
-<img src="Animation Character.gif" alt="game" class="image-bar" />
-<img src="Health.gif" alt="game" class="image-bar" />
-<img src="Enemy01Animation.gif" alt="game" class="image-bar" />
-<img src="MagikBag.gif" alt="game" class="image-bar" />
-<img src="MagikBagMagic.gif" alt="game" class="image-bar" />
-<img src="Move Enemy(2).gif" alt="game" class="image-bar" />
-<img src="Move Enemy1.gif" alt="game" class="image-bar" />
-<img src="Move.gif" alt="game" class="image-bar" />
-<img src="power.gif" alt="game" class="image-bar" />
-<img src="Flowers.png" alt="game" class="image-bar" />
-<img src="Car.png" alt="game" class="image-bar" />
-<img src="CupCake.png" alt="game" class="image-bar" />
-<img src="Donut.png" alt="game" class="image-bar" />
-<img src="Skull.png" alt="game" class="image-bar" />
+<img src="{ base }/Level.gif" alt="game" class="image-bar" />
+<img src="{ base }/AnimatedEnemie1.gif" alt="game" class="image-bar" />
+<img src="{ base }/Animation Character.gif" alt="game" class="image-bar" />
+<img src="{ base }/Health.gif" alt="game" class="image-bar" />
+<img src="{ base }/Enemy01Animation.gif" alt="game" class="image-bar" />
+<img src="{ base }/MagikBag.gif" alt="game" class="image-bar" />
+<img src="{ base }/MagikBagMagic.gif" alt="game" class="image-bar" />
+<img src="{ base }/Move Enemy(2).gif" alt="game" class="image-bar" />
+<img src="{ base }/Move Enemy1.gif" alt="game" class="image-bar" />
+<img src="{ base }/Move.gif" alt="game" class="image-bar" />
+<img src="{ base }/power.gif" alt="game" class="image-bar" />
+<img src="{ base }/Flowers.png" alt="game" class="image-bar" />
+<img src="{ base }/Car.png" alt="game" class="image-bar" />
+<img src="{ base }/CupCake.png" alt="game" class="image-bar" />
+<img src="{ base }/Donut.png" alt="game" class="image-bar" />
+<img src="{ base }/Skull.png" alt="game" class="image-bar" />
 
 </div>
 

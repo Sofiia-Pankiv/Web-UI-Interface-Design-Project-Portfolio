@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Logo Page Loaded");
@@ -8,7 +9,7 @@ onMount(() => {
 </script>
 
 <div class="image-section">
-    <img src="/logoM.png" alt="Fine Art" class="image" />
+    <img src="{ base }/logoM.png" alt="Fine Art" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Logo Design</h1>
@@ -25,13 +26,13 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="13C.JPG" alt="Logo" class="image-bar" />
-<img src="13D.JPG" alt="Logo" class="image-bar" />
-<img src="logoD.png" alt="Logo" class="image-bar" />
-<img src="14a.jpg" alt="Logo" class="image-bar" />
-<img src="14b.jpg" alt="Logo" class="image-bar" />
-<img src="14d.jpg" alt="Logo" class="image-bar" />
-<img src="14c.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/13C.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/13D.JPG" alt="Logo" class="image-bar" />
+<img src="{ base }/logoD.png" alt="Logo" class="image-bar" />
+<img src="{ base }/14a.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/14b.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/14d.jpg" alt="Logo" class="image-bar" />
+<img src="{ base }/14c.jpg" alt="Logo" class="image-bar" />
 
 
 </div>

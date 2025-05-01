@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Fine Art Page Loaded");
@@ -10,7 +11,7 @@ onMount(() => {
 
 
 <div class="image-section">
-    <img src="/FineArt1.png" alt="Fine Art" class="image" />
+    <img src="{ base }/FineArt1.png" alt="Fine Art" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Fine Art</h1>
@@ -27,31 +28,31 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="paper1.JPG" alt="paper 1" class="image-bar" />
-<img src="paper2.JPG" alt="paper 2" class="image-bar" />
-<img src="paper3.JPG" alt="paper 3" class="image-bar" />
-<img src="paper4.JPG" alt="paper 4" class="image-bar" />
-<img src="paper5.JPG" alt="paper 5" class="image-bar" />
+<img src="{ base }/paper1.JPG" alt="paper 1" class="image-bar" />
+<img src="{ base }/paper2.JPG" alt="paper 2" class="image-bar" />
+<img src="{ base }/paper3.JPG" alt="paper 3" class="image-bar" />
+<img src="{ base }/paper4.JPG" alt="paper 4" class="image-bar" />
+<img src="{ base }/paper5.JPG" alt="paper 5" class="image-bar" />
 
-<img src="paperS1.JPG" alt="sketch of paper 1" class="image-bar" />
-<img src="paperS2.JPG" alt="sketch of paper 2" class="image-bar" />
-<img src="paperS3.JPG" alt="sketch of paper 3" class="image-bar" />
-<img src="paperS4.JPG" alt="sketch of paper 4" class="image-bar" />
-<img src="paperS5.JPG" alt="sketch of paper 5" class="image-bar" />
-<img src="paperS6.JPG" alt="sketch of paper 6" class="image-bar" />
-<img src="paperS7.JPG" alt="sketch of paper 7" class="image-bar" />
+<img src="{ base }/paperS1.JPG" alt="sketch of paper 1" class="image-bar" />
+<img src="{ base }/paperS2.JPG" alt="sketch of paper 2" class="image-bar" />
+<img src="{ base }/paperS3.JPG" alt="sketch of paper 3" class="image-bar" />
+<img src="{ base }/paperS4.JPG" alt="sketch of paper 4" class="image-bar" />
+<img src="{ base }/paperS5.JPG" alt="sketch of paper 5" class="image-bar" />
+<img src="{ base }/paperS6.JPG" alt="sketch of paper 6" class="image-bar" />
+<img src="{ base }/paperS7.JPG" alt="sketch of paper 7" class="image-bar" />
 
-<img src="grapefruit.png" alt="grapefruit" class="image-bar" />
-<img src="grapefruit1.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit2.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit3.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit4.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit5.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit6.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit7.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit8.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit9.JPG" alt="grapefruit" class="image-bar" />
-<img src="grapefruit10.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit.png" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit1.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit2.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit3.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit4.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit5.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit6.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit7.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit8.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit9.JPG" alt="grapefruit" class="image-bar" />
+<img src="{ base }/grapefruit10.JPG" alt="grapefruit" class="image-bar" />
 </div>
 
 

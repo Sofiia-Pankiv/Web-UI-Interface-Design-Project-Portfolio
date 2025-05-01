@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Stamp Page Loaded");
@@ -8,7 +9,7 @@ onMount(() => {
 </script>
 
 <div class="image-section">
-    <img src="/stamp.png" alt="Fine Art" class="image" />
+    <img src="{ base }/stamp.png" alt="Fine Art" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Post Marks</h1>
@@ -25,9 +26,9 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="Final stamp1.png" alt="Post Mark" class="image-bar" />
-<img src="Final Stamp 2.png" alt="Post Mark" class="image-bar" />
-<img src="Final Stamp 3.png" alt="Post Mark" class="image-bar" />
+<img src="{ base }/Final stamp1.png" alt="Post Mark" class="image-bar" />
+<img src="{ base }/Final Stamp 2.png" alt="Post Mark" class="image-bar" />
+<img src="{ base }/Final Stamp 3.png" alt="Post Mark" class="image-bar" />
 
 </div>
 

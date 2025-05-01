@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
 
     onMount(() => {
         console.log("Animation Page Loaded");
@@ -8,7 +9,7 @@
 </script>
 
 <div class="image-section">
-    <img src="/first.png" alt="Animation" class="image" />
+    <img src="{ base }/first.png" alt="Animation" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Animation</h1>
@@ -26,13 +27,13 @@
 <div class="scrolling-bar">
 
     <video class="image-bar" autoplay muted loop playsinline>
-        <source src="/Comp 1_1.mp4" type="video/mp4" />
+        <source src="{ base }/Comp 1_1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
       <!-- svelte-ignore a11y_media_has_caption -->
       <video class="image-bar" autoplay muted loop playsinline>
-        <source src="/Frog.FinalProject.mp4" type="video/mp4" />
+        <source src="{ base }/Frog.FinalProject.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

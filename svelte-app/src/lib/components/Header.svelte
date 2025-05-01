@@ -1,6 +1,7 @@
 <script>
     // import Navigation.svelte from lib folder
     import { Navigation } from "$lib"
+    import { base } from '$app/paths';
    
 </script>
 
@@ -8,8 +9,8 @@
 <header>
     <!-- Logo -->
     <div class="logo">
-        <a href="/">
-            <img src="/Logo.png" alt="Website Logo">
+        <a href="{ base }/">
+            <img src="{ base }/Logo.png" alt="Website Logo">
         </a>
         <!-- <h1>My Svelte App</h1> -->
     </div>
@@ -56,7 +57,7 @@
     }
 
     .logo img {
-      width: 100px; /* Keep logo size consistent on phones */
+      width: 80px; /* Keep logo size consistent on phones */
       margin-right: 1rem; /* Add some right margin for spacing */
     }
 

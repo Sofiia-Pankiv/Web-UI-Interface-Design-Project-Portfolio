@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Groom Project Page Loaded");
@@ -10,7 +11,7 @@ onMount(() => {
 
 
 <div class="image-section">
-    <img src="/Groomming.png" alt="Grooming" class="image" />
+    <img src="{ base }/Groomming.png" alt="Grooming" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Grooming Design</h1>
@@ -27,16 +28,15 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="Doberman.poster01.png" alt="Grooming Design" class="image-bar" />
-<img src="Doberman.poster.png" alt="Grooming Design" class="image-bar" />
-<img src="fPoster.png" alt="Grooming Design" class="image-bar" />
-<img src="dogLogo.png" alt="Grooming Design" class="image-bar" />
-<img src="flyer.png" alt="Grooming Design" class="image-bar" />
-<img src="flyer2.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/Doberman.poster01.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/Doberman.poster.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/fPoster.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/dogLogo.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/flyer.png" alt="Grooming Design" class="image-bar" />
+<img src="{ base }/flyer2.png" alt="Grooming Design" class="image-bar" />
 
 </div>
 
-<p>.</p>
 <p>.</p>
 
 

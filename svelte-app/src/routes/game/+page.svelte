@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Web Game Page Loaded");
@@ -10,7 +11,7 @@ onMount(() => {
 
 
 <div class="image-section">
-    <img src="/UtopiaEnter.png" alt="Utopia Game" class="image" />
+    <img src="{ base }/UtopiaEnter.png" alt="Utopia Game" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Utopia Game</h1>
@@ -27,8 +28,8 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="Utopia.png" alt="game" class="image-bar" />
-<img src="Utopia1.png" alt="game" class="image-bar" />
+<img src="{ base }/Utopia.png" alt="game" class="image-bar" />
+<img src="{ base }/Utopia1.png" alt="game" class="image-bar" />
 
 </div>
 

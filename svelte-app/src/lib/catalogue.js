@@ -3,7 +3,7 @@ export const catalogue = [
     { id: '2', image:`Doberman.poster.png`, title: 'Grooming Design', href:"/groom" },
     { id: '3', image:`Final Stamp 2.png`, title: 'Post Marks', href:"/stamp" },
     { id: '4', image:`FineArt.png`, title: 'Fine Art', href:"/fineArt" },
-    { id: '5', image:`iPoster.jpg`, title: 'Posters', href:"/poster" },
+    { id: '5', image:`15i.jpg`, title: 'Posters', href:"/poster" },
     { id: '6', image:`Level.gif`, title: 'Game Assets', href:"/gif" },
     { id: '7', image:`Logo.jpg`, title: 'Logo Design', href:"/logo" },
     { id: '8', image:`painting.JPG`, title: 'Paintings', href:"/painting" },

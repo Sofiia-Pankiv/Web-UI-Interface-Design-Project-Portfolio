@@ -1,4 +1,5 @@
 <script>
+      import { base } from '$app/paths';
     let isOpen = false;
     import {Clock} from "$lib";
 </script>
@@ -8,9 +9,9 @@
 <nav class="nav">
 
     <ul class:open={isOpen}>
-        <li><a href="/">• Info</a></li>
-        <li><a href="/portfolio">• Portfolio</a></li>
-        <li><a href="/contact">• Contact</a></li> 
+        <li><a href="{ base }/">• Info</a></li>
+        <li><a href="{ base }/portfolio">• Portfolio</a></li>
+        <li><a href="{ base }/contact">• Contact</a></li> 
     </ul>
 </nav>
 

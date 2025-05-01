@@ -1,6 +1,7 @@
 <script>
      import { onMount } from 'svelte';
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
 
 onMount(() => {
     console.log("Paintings Page Loaded");
@@ -8,7 +9,7 @@ onMount(() => {
 </script>
 
 <div class="image-section">
-    <img src="/Paintings.png" alt="Painting" class="image" />
+    <img src="{ base }/Paintings.png" alt="Painting" class="image" />
     <button on:click={() => goto('/portfolio')}>← </button>
     <div class="text-overlay">
       <h1>Paintings</h1>
@@ -25,13 +26,13 @@ onMount(() => {
 
 <div class="scrolling-bar">
 
-<img src="1PP.jpg" alt="Painting" class="image-bar" />
-<img src="2PP.JPG" alt="Painting" class="image-bar" />
-<img src="3PP.JPG" alt="Painting" class="image-bar" />
-<img src="4PP.JPG" alt="Painting" class="image-bar" />
-<img src="5PP.JPG" alt="Painting" class="image-bar" />
-<img src="11.JPG" alt="Painting" class="image-bar" />
-<img src="12.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/1PP.jpg" alt="Painting" class="image-bar" />
+<img src="{ base }/2PP.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/3PP.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/4PP.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/5PP.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/11.JPG" alt="Painting" class="image-bar" />
+<img src="{ base }/12.JPG" alt="Painting" class="image-bar" />
 
 </div>
 
