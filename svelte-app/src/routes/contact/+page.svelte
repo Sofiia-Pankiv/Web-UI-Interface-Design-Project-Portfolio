@@ -22,27 +22,27 @@
 
         <div class="line">
             <img src="{ base }/email.png" alt="Email icon" />
-            <a href="{ base }/mailto:sophiapankiv10@gmail.com">sophiapankiv10@gmail.com</a>
+            <a href="mailto:sophiapankiv10@gmail.com">sophiapankiv10@gmail.com</a>
         </div>
     
         <div class="line">
             <img src="{ base }/instagram icon.png" alt="Instagram icon" />
-            <a href="{ base }/https://www.instagram.com/sophia18ad/" target="_blank" rel="noopener noreferrer">@sophia18ad</a>
+            <a href="https://www.instagram.com/sophia18ad/" target="_blank" rel="noopener noreferrer">@sophia18ad</a>
         </div>
     
         <div class="line">
             <img src="{ base }/facebook.png" alt="Facebook icon" />
-            <a href="{ base }/https://www.facebook.com/share/16HQiW6bcr/?mibextid=wwXIfr">Sophia Pankiv</a>
+            <a href="https://www.facebook.com/share/16HQiW6bcr/?mibextid=wwXIfr">Sophia Pankiv</a>
         </div>
 
         <div class="line">
             <img src="{ base }/watsup.png" alt="Whatsapp icon" />
-            <a href="{ base }/https://api.whatsapp.com/send?phone=+3530852854744">+353 85 285 4744</a>
+            <a href="https://api.whatsapp.com/send?phone=+3530852854744">+353 85 285 4744</a>
         </div>
 
         <div class="line">
             <img src="{ base }/Linkidin.png" alt="LinkedIn icon" />
-            <a href="{ base }/https://www.linkedin.com/in/sofiia-pankiv-181614350">Sofiia Pankiv</a>
+            <a href="https://www.linkedin.com/in/sofiia-pankiv-181614350">Sofiia Pankiv</a>
         </div>
     
     </div>
