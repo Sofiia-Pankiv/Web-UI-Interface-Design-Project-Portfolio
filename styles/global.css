@@ -1,0 +1,106 @@
+/* ==============================
+   Global Styles with CSS Variables
+   ============================== */
+
+   :root {
+    /* Color Variables */
+    --primary-color: #290407;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --link-hover-color: #0056b3;
+
+    /* Font Variables */
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Spacing Variables */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --max-width: 1200px;
+}
+
+/* ==============================
+   Global Reset - Ensures consistency across browsers
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ReenieBeanie-Regular';
+    
+}
+
+/* ==============================
+   Base Styles
+   ============================== */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: var(--line-height-base);
+
+     /* Background Image */
+     background-image: url('/Background.png'); /* adjust path if needed */
+     background-size: cover; /* fill the screen */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; /* keeps it in place on scroll */
+     
+}
+
+/* ==============================
+   Headings
+   ============================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: var(--spacing-small);
+    font-family: 'Sue Ellen Francisco';
+}
+
+/* ==============================
+   Paragraphs
+   ============================== */
+p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* ==============================
+   Links
+   ============================== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+/* ==============================
+   Container - Layout Wrapping
+   ============================== */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+
+@font-face {
+    font-family: 'Sue Ellen Francisco';
+    src: url('/Sue Ellen Francisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ReenieBeanie-Regular';
+    src: url('/ReenieBeanie-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
